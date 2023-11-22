@@ -2,7 +2,7 @@ const containerResult = document.querySelector('.result') as HTMLElement;
 const numberBtns = document.querySelectorAll('.number');
 const operatorsBtn = document.querySelectorAll('.sign');
 
-type num = string | boolean;
+type num = string | boolean | number;
 
 let n1: num = false;
 let n2: num = false;
