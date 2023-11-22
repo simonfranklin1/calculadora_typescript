@@ -8,13 +8,17 @@
 body {
     background-color: black;
     padding: 1rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
     display: flex;
     flex-direction: column;
     color: #fff;
-    height: 90vh;
+    height: 100%;
     min-width: 337px;
     max-width: 350px;
     gap: 1rem;

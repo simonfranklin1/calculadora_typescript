@@ -1,6 +1,7 @@
 const containerResult = document.querySelector('.result') as HTMLElement;
 const numberBtns = document.querySelectorAll('.number');
 const operatorsBtn = document.querySelectorAll('.sign');
+const finish = document.querySelector('.finish') as HTMLButtonElement;
 
 type num = string | boolean | number;
 
@@ -8,6 +9,10 @@ let n1: num = false;
 let n2: num = false;
 
 let operator: string  = '';
+
+const showNumber = () :void => {
+    containerResult!.innerText = `${n1.toString().replace('.', ',')}`
+}
 
 numberBtns.forEach((btn: any) :void => {
     btn.addEventListener('click', () :void => {
@@ -17,7 +22,7 @@ numberBtns.forEach((btn: any) :void => {
             n1 += btn.value;
         }
 
-        containerResult.innerText = `${n1}`;
+        showNumber()
     })
 })
 
@@ -30,7 +35,7 @@ operatorsBtn.forEach((btn: any) :void => {
             btn.classList.add('selected');
             operator = btn.value;
             
-            containerResult!.innerText = `${n1}`;
+            showNumber();
             n2 = n1;
             n1 = false;
             console.log(n1, n2)
@@ -55,9 +60,8 @@ const operation = (number2: number, number1: number, sign: string) => {
             break;
     }
 
-    containerResult.innerText = `${result}`;
     n1 = `${result}`;
+    showNumber();
 }
 
-
-document.querySelector('.finish')?.addEventListener('click', () => operation(+n2, +n1, operator));
+finish.addEventListener('click', () => operation(+n2, +n1, operator));

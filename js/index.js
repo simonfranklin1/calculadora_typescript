@@ -1,11 +1,14 @@
 "use strict";
-var _a;
 const containerResult = document.querySelector('.result');
 const numberBtns = document.querySelectorAll('.number');
 const operatorsBtn = document.querySelectorAll('.sign');
+const finish = document.querySelector('.finish');
 let n1 = false;
 let n2 = false;
 let operator = '';
+const showNumber = () => {
+    containerResult.innerText = `${n1.toString().replace('.', ',')}`;
+};
 numberBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         if (!n1) {
@@ -14,7 +17,7 @@ numberBtns.forEach((btn) => {
         else {
             n1 += btn.value;
         }
-        containerResult.innerText = `${n1}`;
+        showNumber();
     });
 });
 operatorsBtn.forEach((btn) => {
@@ -27,7 +30,7 @@ operatorsBtn.forEach((btn) => {
             (_a = document.querySelector('.selected')) === null || _a === void 0 ? void 0 : _a.classList.remove('selected');
             btn.classList.add('selected');
             operator = btn.value;
-            containerResult.innerText = `${n1}`;
+            showNumber();
             n2 = n1;
             n1 = false;
             console.log(n1, n2);
@@ -50,7 +53,7 @@ const operation = (number2, number1, sign) => {
             result = number2 / number1;
             break;
     }
-    containerResult.innerText = `${result}`;
     n1 = `${result}`;
+    showNumber();
 };
-(_a = document.querySelector('.finish')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', () => operation(+n2, +n1, operator));
+finish.addEventListener('click', () => operation(+n2, +n1, operator));
