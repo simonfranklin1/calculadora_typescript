@@ -71,7 +71,7 @@ main {
 }
 
 .number[value="0"] {
-    flex: .9;
+    flex: .87;
     border-radius: 35px;
     justify-content: flex-start;
 }
