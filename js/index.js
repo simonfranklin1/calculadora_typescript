@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 const containerResult = document.querySelector('.result');
 const numberBtns = document.querySelectorAll('.number');
 const operatorsBtn = document.querySelectorAll('.sign');
@@ -33,3 +34,23 @@ operatorsBtn.forEach((btn) => {
         }
     });
 });
+const operation = (number2, number1, sign) => {
+    let result = 0;
+    switch (sign) {
+        case "+":
+            result = number2 + number1;
+            break;
+        case "-":
+            result = number2 - number1;
+            break;
+        case "*":
+            result = number2 * number1;
+            break;
+        case "/":
+            result = number2 / number1;
+            break;
+    }
+    containerResult.innerText = `${result}`;
+    n1 = `${result}`;
+};
+(_a = document.querySelector('.finish')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', () => operation(+n2, +n1, operator));

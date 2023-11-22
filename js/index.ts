@@ -37,3 +37,27 @@ operatorsBtn.forEach((btn: any) :void => {
         }
     })
 })
+
+const operation = (number2: number, number1: number, sign: string) => {
+    let result: number = 0;
+    switch(sign) {
+        case "+":
+            result = number2 + number1;
+            break;
+        case "-":
+            result = number2 - number1;
+            break;
+        case "*":
+            result = number2 * number1;
+            break;
+        case "/":
+            result = number2 / number1;
+            break;
+    }
+
+    containerResult.innerText = `${result}`;
+    n1 = `${result}`;
+}
+
+
+document.querySelector('.finish')?.addEventListener('click', () => operation(+n2, +n1, operator));
