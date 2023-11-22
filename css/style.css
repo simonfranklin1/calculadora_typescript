@@ -22,6 +22,7 @@ main {
     min-width: 337px;
     max-width: 350px;
     gap: 1rem;
+    padding-bottom: 1rem;
 }
 
 .result {
@@ -49,8 +50,7 @@ main {
     height: 4.3rem;
     border-radius: 50%;
     border: none;
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 30px;
     padding: 1rem;
     transition: .2s ease-in-out;
     cursor: pointer;
