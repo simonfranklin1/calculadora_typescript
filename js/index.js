@@ -1,6 +1,6 @@
 "use strict";
 // Elements
-const containerResult = document.querySelector('.result');
+const resultContainer = document.querySelector('.result');
 const numberBtns = document.querySelectorAll('.number');
 const operatorsBtn = document.querySelectorAll('.sign');
 const finish = document.querySelector('.finish');
@@ -12,7 +12,7 @@ let n2 = false;
 let operator = '';
 // Functions
 const showNumber = () => {
-    containerResult.innerText = `${n1.toString().replace('.', ',')}`;
+    resultContainer.innerText = `${n1.toString().replace('.', ',')}`;
 };
 const operation = (number2, number1, sign) => {
     let result = 0;
@@ -37,7 +37,7 @@ const resetNumbers = () => {
     n1 = false;
     n2 = false;
     operator = '';
-    containerResult.innerText = '0';
+    resultContainer.innerText = '0';
     clearBtn.innerText = "AC";
 };
 const negativeNumber = () => {

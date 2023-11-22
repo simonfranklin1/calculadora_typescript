@@ -1,6 +1,6 @@
 // Elements
 
-const containerResult = document.querySelector('.result') as HTMLElement;
+const resultContainer = document.querySelector('.result') as HTMLElement;
 const numberBtns = document.querySelectorAll('.number');
 const operatorsBtn = document.querySelectorAll('.sign');
 const finish = document.querySelector('.finish') as HTMLButtonElement;
@@ -18,7 +18,7 @@ let operator: string  = '';
 // Functions
 
 const showNumber = () :void => {
-    containerResult!.innerText = `${n1.toString().replace('.', ',')}`
+    resultContainer!.innerText = `${n1.toString().replace('.', ',')}`
 }
 
 const operation = (number2: number, number1: number, sign: string) => {
@@ -47,7 +47,7 @@ const resetNumbers = () :void => {
     n2 = false;
     operator = '';
 
-    containerResult.innerText = '0';
+    resultContainer.innerText = '0';
     clearBtn.innerText = "AC"
 }
 
