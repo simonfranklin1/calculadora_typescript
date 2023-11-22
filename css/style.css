@@ -15,10 +15,19 @@ main {
     flex-direction: column;
     color: #fff;
     height: 90vh;
+    min-width: 337px;
+    max-width: 350px;
+    gap: 1rem;
 }
 
 .result {
+    display: flex;
+    justify-content: end;
+    align-items: end;
     height: 39%;
+    font-size: 55px;
+    color: #fff;
+    margin: 0 5%;
 }
 
 .calculator {
