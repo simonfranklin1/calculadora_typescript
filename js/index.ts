@@ -8,10 +8,10 @@ const clearBtn = document.querySelector('.clear') as HTMLButtonElement
 const negativeBtn = document.querySelector('.negative') as HTMLButtonElement;
 const byHundredBtn = document.querySelector('.percent') as HTMLButtonElement;
 
-type num = string | boolean;
+type numToBeShown = string | boolean;
 
-let n1: num = false;
-let n2: num = false;
+let n1: numToBeShown = false;
+let n2: numToBeShown = false;
 
 let operator: string  = '';
 
