@@ -1,10 +1,10 @@
 // Elements
 
-const resultContainer = document.querySelector('.result') as HTMLElement;
-const numberBtns = document.querySelectorAll('.number');
-const operatorsBtn = document.querySelectorAll('.sign');
+const resultContainer = document.querySelector('.result') as HTMLDivElement;
+const numberBtns = document.querySelectorAll('.number') as NodeListOf<HTMLButtonElement>;
+const operatorsBtn = document.querySelectorAll('.sign') as NodeListOf<HTMLButtonElement>;
 const finish = document.querySelector('.finish') as HTMLButtonElement;
-const clearBtn = document.querySelector('.clear') as HTMLButtonElement
+const clearBtn = document.querySelector('.clear') as HTMLButtonElement;
 const negativeBtn = document.querySelector('.negative') as HTMLButtonElement;
 const byHundredBtn = document.querySelector('.percent') as HTMLButtonElement;
 
