@@ -1,5 +1,5 @@
 # Calculadora TypeScript
-Primeiro projeto feito com TypeScript para fixar o aprendizado
+Primeiro projeto feito em TypeScript. Uma calculadora simples é um ótimo projeto para fixar o aprendizado.
 
 ## O usuário pode
 - Somar, subtrair, multiplicar e dividir números
@@ -11,3 +11,7 @@ Primeiro projeto feito com TypeScript para fixar o aprendizado
 - TypeScript
 - HTML
 - CSS
+
+## Links
+- [Site no ar](https://simonfranklin1.github.io/calculadora_typescript/)
+- [Autor](https://github.com/simonfranklin1)
