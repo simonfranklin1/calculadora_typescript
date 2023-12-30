@@ -77,7 +77,7 @@ const divideByHundred = () :void => {
 
 // Events
 
-numberBtns.forEach((btn: any) :void => {
+numberBtns.forEach((btn: HTMLButtonElement) :void => {
     btn.addEventListener('click', () :void => {
         if(!n1) {
             n1 = btn.value;
@@ -90,7 +90,7 @@ numberBtns.forEach((btn: any) :void => {
     })
 })
 
-operatorsBtn.forEach((btn: any) :void => {
+operatorsBtn.forEach((btn: HTMLButtonElement) :void => {
     btn.addEventListener('click', () :void => {
         if(!n1) {
             return
